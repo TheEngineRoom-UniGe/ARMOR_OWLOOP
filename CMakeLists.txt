@@ -46,12 +46,15 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   QueryItem.msg
+  ArmorDirectiveReq.msg
+  ArmorDirectiveRes.msg
 )
 
 # Generate services in the 'srv' folder
 add_service_files(
   FILES
   ArmorDirective.srv
+  ArmorDirectiveList.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -183,3 +186,4 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+catkin_package(CATKIN_DEPENDS message_runtime )
