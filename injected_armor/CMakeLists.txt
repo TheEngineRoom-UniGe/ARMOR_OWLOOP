@@ -15,7 +15,7 @@ find_package(catkin REQUIRED injected_armor_msgs rosjava_build_tools)
 #   catkin_rosjava_setup(installApp)
 # Note that the catkin_create_rosjava_xxx scripts will usually automatically
 # add tasks to this for you when you create subprojects.
-catkin_rosjava_setup(install publishMavenJavaPublicationToMavenRepository) #installApp
+catkin_rosjava_setup(install deployApp publishMavenJavaPublicationToMavenRepository) #installApp
 
 catkin_package()
 
