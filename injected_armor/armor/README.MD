@@ -157,12 +157,16 @@ The complete list of **commands** and **directives** can be found here:
 | **205**                  | *Non-existing command/specification*                            |
 
 
+## ARMOR core projects 
+
+ARMOR was cloned from [EMAROlab](https://github.com/EmaroLab/armor)
+
 ## Publication
 More details at:
 - [AROW ROMAN 2017](https://www.researchgate.net/publication/318107154_A_ROS_multi-ontology_references_services_OWL_reasoners_and_application_prototyping_issues)
 - [and related presentation](https://www.researchgate.net/publication/319483418_A_ROS_Multi-Ontology_References_Service_OWL_Reasoners_and_Application_Prototyping_Issues)
 
 ## Contacts
-For comment, discussions or support refer to this git repository or contact us at:
+For comment, discussions or support refer to this git repository and open issues before to contact us at:
  - [alessio.capitanelli@dibris.unige.it](mailto:alessio.capitanelli@dibris.unige.it),
  - [luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it).
