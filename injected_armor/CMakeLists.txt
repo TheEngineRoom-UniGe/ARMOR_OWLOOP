@@ -3,19 +3,19 @@
 ##############################################################################
 
 cmake_minimum_required(VERSION 2.8.3)
-project(multi_ontology_reference)
+project(injected_armor)
 
 ##############################################################################
 # Catkin
 ##############################################################################
 
-find_package(catkin REQUIRED rosjava_build_tools)
+find_package(catkin REQUIRED injected_armor_msgs rosjava_build_tools)
 
 # Set the gradle targets you want catkin's make to run by default, e.g.
 #   catkin_rosjava_setup(installApp)
 # Note that the catkin_create_rosjava_xxx scripts will usually automatically
 # add tasks to this for you when you create subprojects.
-catkin_rosjava_setup(install publishMavenJavaPublicationToMavenRepository)
+catkin_rosjava_setup(install publishMavenJavaPublicationToMavenRepository) #installApp
 
 catkin_package()
 

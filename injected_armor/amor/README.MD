@@ -27,12 +27,12 @@ Finally, see the [/examples](https://github.com/EmaroLab/multi_ontology_referenc
 **NOTE:** the GUI and some minor utilities have become unstable after porting to OWL-api 5. We'll try to fix them as soon as we can.
 
 
-## OWLapi5-Benchmarks
+## Original Package
 
-This specific **branch** contains utilities and examples to test AMOR performance with respect to simple owl-api. It is based on the [LUBM benchmark](http://swat.cse.lehigh.edu/projects/lubm/).
-
+This ROS package has been imported from [EmaroLab](https://github.com/EmaroLab/multi_ontology_reference).
 
 ## Contacts
-For comments, discussions or support, refer to this page or contact us at:
- - [luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it), 
- - [alessio.capitanelli@dibris.unige.it](mailto:alessio.capitanelli@dibris.unige.it).
+
+For comment, discussions or support refer to this git repository and open issues before to contact us at:
+ - [alessio.capitanelli@dibris.unige.it](mailto:alessio.capitanelli@dibris.unige.it),
+ - [luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it).
