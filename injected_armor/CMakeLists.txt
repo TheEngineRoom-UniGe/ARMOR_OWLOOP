@@ -3,13 +3,13 @@
 ##############################################################################
 
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_pgk_name)
+project(injected_armor)
 
 ##############################################################################
 # Catkin
 ##############################################################################
 
-find_package(catkin REQUIRED ros_java_msgs rosjava_build_tools)
+find_package(catkin REQUIRED injected_armor_msgs rosjava_build_tools)
 
 # Set the gradle targets you want catkin's make to run by default, e.g.
 #   catkin_rosjava_setup(installApp)

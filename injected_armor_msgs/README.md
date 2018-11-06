@@ -1,6 +1,6 @@
 # armor_msgs
 
-This RO package has been imported from [EmaroLab](https://github.com/EmaroLab/armor_msgs).
+This ROS package has been imported from [EmaroLab](https://github.com/EmaroLab/armor_msgs).
 
 It contains the definition of all the [Services](https://github.com/EmaroLab/armor_msgs/tree/master/srv) and [Messages](https://github.com/EmaroLab/armor_msgs/tree/master/msg) used by **a ROS Multi-Ontology Reference** ([arMOR](https://github.com/EmaroLab/armor)) architecture.
 
