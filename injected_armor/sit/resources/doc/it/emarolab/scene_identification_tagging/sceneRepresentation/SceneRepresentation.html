@@ -49,7 +49,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialAtom.html" title="class in it.emarolab.scene_identification_tagging.sceneRepresentation"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialAtom.html" title="class in it.emarolab.sit.sceneRepresentation"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html" target="_top">Frames</a></li>
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">it.emarolab.scene_identification_tagging.sceneRepresentation</div>
+<div class="subTitle">it.emarolab.sit.sceneRepresentation</div>
 <h2 title="Class SceneRepresentation" class="title">Class SceneRepresentation</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>it.emarolab.scene_identification_tagging.sceneRepresentation.SceneRepresentation</li>
+<li>it.emarolab.sit.sceneRepresentation.SceneRepresentation</li>
 </ul>
 </li>
 </ul>
@@ -108,16 +108,16 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.scene_identification_tagging">SITBase</a></dd>
+<dd><a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.sit">SITBase</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">SceneRepresentation</span>
 extends java.lang.Object
-implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.scene_identification_tagging">SITBase</a></pre>
+implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.sit">SITBase</a></pre>
 <div class="block">The core of this system than compute the SIT algorithm.
  <p>
-     This class is in charge to map the <a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.scene_identification_tagging.sceneRepresentation"><code>SpatialRelation</code></a> between two
+     This class is in charge to map the <a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.sit.sceneRepresentation"><code>SpatialRelation</code></a> between two
      objects in a set of relations to an abstract scene representation.
      It also compute the recognition with a given confidence.
      Last but not the least, it is able to <a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#learn-java.lang.String-"><code>learn(String)</code></a>
@@ -129,7 +129,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
      create a hierarchy between scenes that share some similarities.
      <br>
      During constructor it computes the SIT algorithm for the recognition phase,
-     by create a set of <a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.scene_identification_tagging.sceneRepresentation"><code>SpatialRelation</code></a> (<a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#getRelations--"><code>getRelations()</code></a>) applied
+     by create a set of <a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.sit.sceneRepresentation"><code>SpatialRelation</code></a> (<a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#getRelations--"><code>getRelations()</code></a>) applied
      to an abstract <code>INDIVIDUAL#SCENE</code>, appended with a static counter
      (*     An optional flag for adding the time stamp data property (i.e.: <code>DATA_PROPERTY#TIME</code>) is also available.).
      This is the minimal set of the relation that represents the scene, to obtained
@@ -150,7 +150,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
      <br>
 
  <div style="text-align:center;"><small>
- <b>File</b>:        it.emarolab.scene_identification_tagging.sceneRepresentation.SceneRepresentation <br>
+ <b>File</b>:        it.emarolab.sit.sceneRepresentation.SceneRepresentation <br>
  <b>Licence</b>:     GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007 <br>
  <b>Author</b>:      Buoncompagni Luca (luca.buoncompagni@edu.unige.it) <br>
  <b>affiliation</b>: EMAROLab, DIBRIS, University of Genoa. <br>
@@ -169,11 +169,11 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 </a>
 <h3>Nested Class Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a name="nested.classes.inherited.from.class.it.emarolab.scene_identification_tagging.SITBase">
+<li class="blockList"><a name="nested.classes.inherited.from.class.it.emarolab.sit.SITBase">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;it.emarolab.scene_identification_tagging.<a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.scene_identification_tagging">SITBase</a></h3>
-<code><a href="../../../../it/emarolab/scene_identification_tagging/SITBase.CLASS.html" title="interface in it.emarolab.scene_identification_tagging">SITBase.CLASS</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.DATA_PROPERTY.html" title="interface in it.emarolab.scene_identification_tagging">SITBase.DATA_PROPERTY</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.INDIVIDUAL.html" title="interface in it.emarolab.scene_identification_tagging">SITBase.INDIVIDUAL</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.OBJECT_PROPERTY.html" title="interface in it.emarolab.scene_identification_tagging">SITBase.OBJECT_PROPERTY</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.VOCABOLARY.html" title="interface in it.emarolab.scene_identification_tagging">SITBase.VOCABOLARY</a></code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;it.emarolab.sit.<a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.sit">SITBase</a></h3>
+<code><a href="../../../../it/emarolab/scene_identification_tagging/SITBase.CLASS.html" title="interface in it.emarolab.sit">SITBase.CLASS</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.DATA_PROPERTY.html" title="interface in it.emarolab.sit">SITBase.DATA_PROPERTY</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.INDIVIDUAL.html" title="interface in it.emarolab.sit">SITBase.INDIVIDUAL</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.OBJECT_PROPERTY.html" title="interface in it.emarolab.sit">SITBase.OBJECT_PROPERTY</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.VOCABOLARY.html" title="interface in it.emarolab.sit">SITBase.VOCABOLARY</a></code></li>
 </ul>
 </li>
 </ul>
@@ -184,10 +184,10 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 </a>
 <h3>Field Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a name="fields.inherited.from.class.it.emarolab.scene_identification_tagging.SITBase">
+<li class="blockList"><a name="fields.inherited.from.class.it.emarolab.sit.SITBase">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;it.emarolab.scene_identification_tagging.<a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.scene_identification_tagging">SITBase</a></h3>
+<h3>Fields inherited from interface&nbsp;it.emarolab.sit.<a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html" title="interface in it.emarolab.sit">SITBase</a></h3>
 <code><a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html#CONFIDENCE_THRESHOLD">CONFIDENCE_THRESHOLD</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html#ONTO_FILE">ONTO_FILE</a>, <a href="../../../../it/emarolab/scene_identification_tagging/SITBase.html#ONTO_IRI">ONTO_IRI</a></code></li>
 </ul>
 </li>
@@ -204,7 +204,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#SceneRepresentation-it.emarolab.scene_identification_tagging.SpatialSimplifier-it.emarolab.amor.owlInterface.OWLReferences-">SceneRepresentation</a></span>(<a href="../../../../it/emarolab/scene_identification_tagging/SpatialSimplifier.html" title="class in it.emarolab.scene_identification_tagging">SpatialSimplifier</a>&nbsp;objects,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#SceneRepresentation-it.emarolab.sit.SpatialSimplifier-it.emarolab.amor.owlInterface.OWLReferences-">SceneRepresentation</a></span>(<a href="../../../../it/emarolab/scene_identification_tagging/SpatialSimplifier.html" title="class in it.emarolab.sit">SpatialSimplifier</a>&nbsp;objects,
                    it.emarolab.amor.owlInterface.OWLReferences&nbsp;ontoRef)</code>
 <div class="block">This constructor assume that the given <code>object</code> have all object property that
  describes spatial relations between two objects (already populated from SWRL rules)
@@ -227,7 +227,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneClassDescriptor.html" title="class in it.emarolab.scene_identification_tagging.owloopDescriptor">SceneClassDescriptor</a></code></td>
+<td class="colFirst"><code><a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneClassDescriptor.html" title="class in it.emarolab.sit.owloopDescriptor">SceneClassDescriptor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#getBestRecognitionDescriptor--">getBestRecognitionDescriptor</a></span>()</code>
 <div class="block">The abstract scene class that best fits the recognition of this concrete scene individual.</div>
 </td>
@@ -240,14 +240,14 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.util.Set&lt;<a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.scene_identification_tagging.sceneRepresentation">SpatialRelation</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Set&lt;<a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.sit.sceneRepresentation">SpatialRelation</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#getRelations--">getRelations</a></span>()</code>
 <div class="block">The minimal set of spatial relation properties between oll the individuals
  given on the constructor.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneIndividualDescriptor.html" title="class in it.emarolab.scene_identification_tagging.owloopDescriptor">SceneIndividualDescriptor</a></code></td>
+<td class="colFirst"><code><a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneIndividualDescriptor.html" title="class in it.emarolab.sit.owloopDescriptor">SceneIndividualDescriptor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html#getSceneDescriptor--">getSceneDescriptor</a></span>()</code>
 <div class="block">The concrete scene description created on the constructor.</div>
 </td>
@@ -303,13 +303,13 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="SceneRepresentation-it.emarolab.scene_identification_tagging.SpatialSimplifier-it.emarolab.amor.owlInterface.OWLReferences-">
+<a name="SceneRepresentation-it.emarolab.sit.SpatialSimplifier-it.emarolab.amor.owlInterface.OWLReferences-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SceneRepresentation</h4>
-<pre>public&nbsp;SceneRepresentation(<a href="../../../../it/emarolab/scene_identification_tagging/SpatialSimplifier.html" title="class in it.emarolab.scene_identification_tagging">SpatialSimplifier</a>&nbsp;objects,
+<pre>public&nbsp;SceneRepresentation(<a href="../../../../it/emarolab/scene_identification_tagging/SpatialSimplifier.html" title="class in it.emarolab.sit">SpatialSimplifier</a>&nbsp;objects,
                            it.emarolab.amor.owlInterface.OWLReferences&nbsp;ontoRef)</pre>
 <div class="block">This constructor assume that the given <code>object</code> have all object property that
  describes spatial relations between two objects (already populated from SWRL rules)
@@ -371,7 +371,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <ul class="blockList">
 <li class="blockList">
 <h4>getRelations</h4>
-<pre>public&nbsp;java.util.Set&lt;<a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.scene_identification_tagging.sceneRepresentation">SpatialRelation</a>&gt;&nbsp;getRelations()</pre>
+<pre>public&nbsp;java.util.Set&lt;<a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialRelation.html" title="class in it.emarolab.sit.sceneRepresentation">SpatialRelation</a>&gt;&nbsp;getRelations()</pre>
 <div class="block">The minimal set of spatial relation properties between oll the individuals
  given on the constructor.</div>
 <dl>
@@ -386,7 +386,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <ul class="blockList">
 <li class="blockList">
 <h4>getSceneDescriptor</h4>
-<pre>public&nbsp;<a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneIndividualDescriptor.html" title="class in it.emarolab.scene_identification_tagging.owloopDescriptor">SceneIndividualDescriptor</a>&nbsp;getSceneDescriptor()</pre>
+<pre>public&nbsp;<a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneIndividualDescriptor.html" title="class in it.emarolab.sit.owloopDescriptor">SceneIndividualDescriptor</a>&nbsp;getSceneDescriptor()</pre>
 <div class="block">The concrete scene description created on the constructor.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -401,7 +401,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <ul class="blockList">
 <li class="blockList">
 <h4>getBestRecognitionDescriptor</h4>
-<pre>public&nbsp;<a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneClassDescriptor.html" title="class in it.emarolab.scene_identification_tagging.owloopDescriptor">SceneClassDescriptor</a>&nbsp;getBestRecognitionDescriptor()</pre>
+<pre>public&nbsp;<a href="../../../../it/emarolab/scene_identification_tagging/owloopDescriptor/SceneClassDescriptor.html" title="class in it.emarolab.sit.owloopDescriptor">SceneClassDescriptor</a>&nbsp;getBestRecognitionDescriptor()</pre>
 <div class="block">The abstract scene class that best fits the recognition of this concrete scene individual.
  Other classes that describe more generically this scene can be obtained from the super
  classes of this <code>Descriptor</code>.</div>
@@ -485,7 +485,7 @@ implements <a href="../../../../it/emarolab/scene_identification_tagging/SITBase
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialAtom.html" title="class in it.emarolab.scene_identification_tagging.sceneRepresentation"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../it/emarolab/scene_identification_tagging/sceneRepresentation/SpatialAtom.html" title="class in it.emarolab.sit.sceneRepresentation"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?it/emarolab/scene_identification_tagging/sceneRepresentation/SceneRepresentation.html" target="_top">Frames</a></li>
