@@ -143,8 +143,11 @@ definition and regenerate it from scratch, instead of updating.
 # 
 
 
+## Original Package
 
-### Contacts
+This ROS package has been imported from [EmaroLab](https://github.com/EmaroLab/armor).
 
-For any information, support, discussion or comments do not hesitate to contact me through this Github repository or at: 
-[luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it), 
+## Contacts
+
+For comment, discussions or support refer to this git repository and open issues before to contact us at:
+ - [luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it).

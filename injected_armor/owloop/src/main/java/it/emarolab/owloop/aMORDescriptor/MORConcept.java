@@ -1326,8 +1326,7 @@ public interface MORConcept
                     for (SemanticRestriction a : to.getToAdd())
                         changes.add(getOntology().addRestriction(a));
 
-                    changes.addAll(getOntology().convertSuperClassesToEquivalentClass(getInstance(),
-                            getDefinitionConcept()));
+                    changes.addAll(getOntology().convertSuperClassesToEquivalentClass(getInstance(), getDefinitionConcept()));
                 }
                 return getChangingIntent(to, changes);
             } catch (Exception e){

@@ -14,7 +14,6 @@ allprojects {
       A github url provides a good standard unique name for your project
       Example below, but you may wish to switch to your own unique url.
     */
-//    group 'it.emarolab.amor'
     group 'it.emarolab.injected_armor'
     version = project.catkin.pkg.version
 }

@@ -1,3 +1,6 @@
+group 'it.emarolab.amor'
+version = project.catkin.pkg.version
+
 repositories {
     maven {
         url "../../../../devel/share/maven/"

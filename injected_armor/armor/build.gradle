@@ -1,3 +1,5 @@
+group 'it.emarolab.armor'
+version = project.catkin.pkg.version
 apply plugin: 'application'
 mainClassName = 'org.ros.RosRun'
 
