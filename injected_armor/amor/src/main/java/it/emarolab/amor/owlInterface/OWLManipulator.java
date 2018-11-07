@@ -705,9 +705,12 @@ public class OWLManipulator{
             onts.add( ontoRef.getOWLOntology());
             List<OWLOntologyChange> changes = new ConvertSuperClassesToEquivalentClass( ontoRef.getOWLFactory(), cl, onts, ontoRef.getOWLOntology()).getChanges();
             for( OWLOntologyChange c : changes) {
-                if ( ! manipulationBuffering)
-                    applyChanges( c);
-                changeList.add( c);
+                Stream<OWLClassExpression> nestedClassStream = c.getAxiom().nestedClassExpressions();
+                if( nestedClassStream.count() > 2){ // TODO fix me to avoid empty declaration on protege
+                    if (!manipulationBuffering)
+                        applyChanges(c);
+                    changeList.add(c);
+                }
             }
             logger.addDebugString( "converting super class: " + ontoRef.getOWLObjectName( cl) + " to equivalent class" +
                     " in: " + (System.nanoTime() - initialTime) + " [ns]");
