@@ -1,13 +1,19 @@
 package it.emarolab.amor.owlInterface;
 
+import com.google.common.collect.Iterators;
 import it.emarolab.amor.owlDebugger.Logger;
 import it.emarolab.amor.owlDebugger.Logger.LoggerFlag;
+import org.semanticweb.owlapi.change.AbstractCompositeOntologyChange;
+import org.semanticweb.owlapi.change.ConvertEquivalentClassesToSuperClasses;
 import org.semanticweb.owlapi.change.ConvertSuperClassesToEquivalentClass;
 import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.reasoner.InconsistentOntologyException;
+import org.semanticweb.owlapi.util.OWLAPIStreamUtils;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.OWLEntityRenamer;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 
 // TODO :  SWRL
@@ -674,7 +680,7 @@ public class OWLManipulator{
 
 
     /**
-     * Given a class {@code C}, it uses {@link org.semanticweb.owlapi.change.ConvertEquivalentClassesToSuperClasses}
+     * Given a class {@code C}, it uses {@link org.semanticweb.owlapi.change.ConvertSuperClassesToEquivalentClass}
      * to convert all the sub class axioms of {@code C} into a conjunctions of expressions
      * in the definition of the class itself.
      * @param className the name of the class to be converted from sub classing to equivalent expression.
@@ -685,7 +691,7 @@ public class OWLManipulator{
         return convertSuperClassesToEquivalentClass( ontoRef.getOWLClass( className));
     }
     /**
-     * Given a class {@code C}, it uses {@link org.semanticweb.owlapi.change.ConvertEquivalentClassesToSuperClasses}
+     * Given a class {@code C}, it uses {@link org.semanticweb.owlapi.change.ConvertSuperClassesToEquivalentClass}
      * to convert all the sub class axioms of {@code C} into a conjunctions of expressions
      * in the definition of the class itself.
      * @param cl the class to be converted from sub classing to equivalent expression.
@@ -711,6 +717,131 @@ public class OWLManipulator{
             return( null);
         }
     }
+
+    public List<OWLOntologyChange> convertEquivalentClassesToSuperClasses(String className) {
+        return this.convertEquivalentClassesToSuperClasses(this.ontoRef.getOWLClass(className));
+    }
+
+    public List<OWLOntologyChange> convertEquivalentClassesToSuperClasses(OWLClass cl) {
+        try {
+            long e = System.nanoTime();
+            HashSet onts = new HashSet();
+            onts.add(this.ontoRef.getOWLOntology());
+            boolean splitRestriction = true;
+            List changes = (new ConvertEquivalentClassesToSuperClasses(this.ontoRef.getOWLFactory(), cl, onts, this.ontoRef.getOWLOntology(), splitRestriction)).getChanges();
+
+            OWLOntologyChange c;
+            for(Iterator var7 = changes.iterator(); var7.hasNext(); this.changeList.add(c)) {
+                c = (OWLOntologyChange)var7.next();
+                if(!this.manipulationBuffering.booleanValue()) {
+                    this.applyChanges(c);
+                }
+            }
+
+            this.logger.addDebugString("converting equivalent class: " + this.ontoRef.getOWLObjectName(cl) + " to super class in: " + (System.nanoTime() - e) + " [ns]");
+            return changes;
+        } catch (InconsistentOntologyException var9) {
+            this.ontoRef.logInconsistency();
+            return null;
+        }
+    }
+
+    public List<OWLOntologyChange> convertSuperClassesToEquivalentClass(OWLClass cl, Set<? extends SemanticRestriction> restrictions) {
+        try {
+            long e = System.nanoTime();
+            ArrayList descs = new ArrayList();
+            ArrayList changes = new ArrayList();
+            Iterator equivalentClass = restrictions.iterator();
+
+            while(equivalentClass.hasNext()) {
+                SemanticRestriction c = (SemanticRestriction)equivalentClass.next();
+                OWLSubClassOfAxiom a = ((SemanticRestriction.RestrictOnClass)c).getAxiom(this.ontoRef);
+                OWLOntologyChange c1 = this.getRemoveAxiom(a);
+                changes.add(c1);
+                descs.add(a.getSuperClass());
+                if(!this.manipulationBuffering) {
+                    this.applyChanges(c1);
+                }
+            }
+
+            OWLObjectIntersectionOf equivalentClass1 = this.ontoRef.getOWLFactory().getOWLObjectIntersectionOf(descs);
+            OWLOntologyChange c2 = this.getAddAxiom(this.ontoRef.getOWLFactory().getOWLEquivalentClassesAxiom(Arrays.asList(new OWLClassExpression[]{cl, equivalentClass1})));
+            changes.add(c2);
+            if(!this.manipulationBuffering) {
+                this.applyChanges(c2);
+            }
+
+            this.logger.addDebugString("converting super class: " + this.ontoRef.getOWLObjectName(cl) + " to equivalent class of restriction " + restrictions + " in: " + (System.nanoTime() - e) + " [ns]");
+            return changes;
+        } catch (InconsistentOntologyException var11) {
+            this.ontoRef.logInconsistency();
+            return null;
+        }
+    }
+
+    public List<OWLOntologyChange> convertEquivalentClassesToSuperClasses(OWLClass cl, Set<? extends SemanticRestriction> restrictions) {
+        try {
+            long e = System.nanoTime();
+            List changes = (new OWLManipulator.MyConvertEquivalentClassesToSuperClasses(this.ontoRef, cl, restrictions)).getChanges();
+
+            OWLOntologyChange c;
+            for(Iterator var6 = changes.iterator(); var6.hasNext(); this.changeList.add(c)) {
+                c = (OWLOntologyChange)var6.next();
+                if(!this.manipulationBuffering.booleanValue()) {
+                    this.applyChanges(c);
+                }
+            }
+
+            this.logger.addDebugString("converting super class: " + this.ontoRef.getOWLObjectName(cl) + " to equivalent class in: " + (System.nanoTime() - e) + " [ns]");
+            return changes;
+        } catch (InconsistentOntologyException var8) {
+            this.ontoRef.logInconsistency();
+            return null;
+        }
+    }
+    private class MyConvertEquivalentClassesToSuperClasses extends AbstractCompositeOntologyChange {
+        private final OWLClassExpressionVisitorEx<Stream<? extends OWLClassExpression>> INTERSECTION_SPLITTER = new OWLClassExpressionVisitorEx() {
+            public Stream<? extends OWLClassExpression> visit(OWLObjectIntersectionOf ce) {
+                return ce.operands();
+            }
+
+            public Stream<? extends OWLClassExpression> doDefault(Object o) {
+                return OWLAPIStreamUtils.empty();
+            }
+        };
+        private final boolean splitIntersections = true;
+
+        public MyConvertEquivalentClassesToSuperClasses(OWLReferencesInterface ontoRef, OWLClass cls, Set<? extends SemanticRestriction> restrictions) {
+            super(ontoRef.getOWLFactory());
+            this.generateChanges(ontoRef, cls, restrictions);
+        }
+
+        private void generateChanges(OWLReferencesInterface ontoRef, OWLClass cls, Set<? extends SemanticRestriction> restrictions) {
+            HashSet<OWLClassExpression> supers = new HashSet();
+
+            for( SemanticRestriction r : restrictions){
+                OWLEquivalentClassesAxiom a = ontoRef.getOWLFactory().getOWLEquivalentClassesAxiom( r.getRestriction(ontoRef));
+                this.addChange(new RemoveAxiom(ontoRef.getOWLOntology(), a));
+                a.classExpressions().forEach((c) -> {
+                    this.collectClassExpressions(c, supers);
+                });
+            }
+            supers.remove(cls);
+            supers.forEach((sup) -> this.addChange(new AddAxiom(ontoRef.getOWLOntology(), this.df.getOWLSubClassOfAxiom(cls, sup))));
+        }
+
+        private void collectClassExpressions(OWLClassExpression desc, Collection<OWLClassExpression> supers) {
+            Iterator iterator = ((Stream)desc.accept(this.INTERSECTION_SPLITTER)).iterator();
+            if(iterator.hasNext()) {
+                Iterators.addAll(supers, iterator);
+            } else {
+                supers.add(desc);
+            }
+
+        }
+    }
+
+
 
 
     /**

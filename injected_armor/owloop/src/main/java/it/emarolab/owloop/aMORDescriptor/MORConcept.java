@@ -1319,7 +1319,7 @@ public interface MORConcept
 
                 if ( to.getToAdd().size() > 0 | to.getToRemove().size() > 0){
                     //noinspection unchecked
-                    changes.addAll( getOntology().convertEquivalentClassesToSuperClasses( getInstance()));
+                    changes.addAll( getOntology().convertSuperClassesToEquivalentClass( getInstance()));
                     for (SemanticRestriction r : to.getToRemove())
                         changes.add( getOntology().removeRestriction( r));
 
