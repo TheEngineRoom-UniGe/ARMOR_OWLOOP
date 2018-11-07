@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
-  <name>armor_py_api</name>
-  <version>0.1.0</version>
+  <name>armor_py_client_api</name>
+  <version>2.0.0</version>
   <description>armor_py_api- a python interface for armor clients</description>
   <maintainer email="alessio.capitanelli@dibris.unige.it">Alessio Capitanelli</maintainer>
   <author email="alessio.capitanelli@dibris.unige.it">Alessio Capitanelli</author>
@@ -11,13 +11,11 @@
   <url type="website">https://github.com/EmaroLab</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>armor</build_depend>
-  <build_depend>armor_msgs</build_depend>
-  <build_depend>multi_ontology_reference</build_depend>
+  <build_depend>injected_armor</build_depend>
+  <build_depend>injected_armor_msgs</build_depend>
   <build_depend>rospy</build_depend>
-  <run_depend>armor</run_depend>
-  <run_depend>armor_msgs</run_depend>
-  <run_depend>multi_ontology_reference</run_depend>
+<!--  <run_depend>injected_armor</run_depend>-->
+  <run_depend>injected_armor_msgs</run_depend>
   <run_depend>rospy</run_depend>
 
 

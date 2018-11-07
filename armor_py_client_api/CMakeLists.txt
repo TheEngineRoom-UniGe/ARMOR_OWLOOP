@@ -1,15 +1,14 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(armor_py_api)
+project(armor_py_client_api)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED
 	rospy
-	armor
-    armor_msgs
-    multi_ontology_reference
-  	)
+	injected_armor_msgs
+	injected_armor
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

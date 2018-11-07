@@ -2,8 +2,8 @@
 Python client manager class for Armor --ArmorPy.
 """
 
-from armor_msgs.srv import ArmorDirective, ArmorDirectiveList, ArmorDirectiveListRequest
-from armor_msgs.msg import _ArmorDirectiveReq
+from injected_armor_msgs.srv import ArmorDirective, ArmorDirectiveList, ArmorDirectiveListRequest
+from injected_armor_msgs.msg import _ArmorDirectiveReq
 from armor_manipulation_client import ArmorManipulationClient
 from armor_query_client import ArmorQueryClient
 from armor_utils_client import ArmorUtilsClient
@@ -12,7 +12,7 @@ import rospy
 __author__ = "Alessio Capitanelli"
 __copyright__ = "Copyright 2016, ArmorPy"
 __license__ = "GNU"
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __maintainer__ = "Alessio Capitanelli"
 __email__ = "alessio.capitanelli@dibris.unige.it"
 __status__ = "Development"

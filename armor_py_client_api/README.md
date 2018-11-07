@@ -1,5 +1,5 @@
 # ArmorPy
-A python client library for [**ARMOR**](https://github.com/EmaroLab/armor).
+A python client library for **ARMOR** originally hosted [here](https://github.com/EmaroLab/armor).
 
 Allows users to easily call ARMOR service from Python code.
 
@@ -35,3 +35,6 @@ use it in your code and run it. Thus, even if your IDE cannot find your imports,
 your code will work (it should find an **\_\_init\_\_.py** file only). Adding sources
 will allow you to see ArmorPy code for quick reference, easier debugging and 
 getting rid of annoying warnings.
+
+# Author
+ - [alessio.capitanelli@dibris.unige.it](mailto:alessio.capitanelli@dibris.unige.it).

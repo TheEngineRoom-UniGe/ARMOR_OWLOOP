@@ -1,0 +1,7 @@
+<launch>
+
+	<node pkg="injected_armor" type="execute" name="armor_service" args="it.emarolab.armor.ARMORMainService"  output="screen"/>
+
+    <node pkg="armor_py_client_api" type="client_test.py" name="testClient" output="screen"/>
+
+</launch>
