@@ -52,7 +52,7 @@ CATKIN_IGNORE
 
 
 # From https://github.com/github/gitignore/blob/master/Gradle.gitignore
-.gradle
+#.gradle
 /build/
 
 # Ignore Gradle GUI config
@@ -579,7 +579,6 @@ dist/
 *.csv
 nbdist/
 .nb-gradle/
-!build.gradle
 
 
 ######################
