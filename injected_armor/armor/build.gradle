@@ -1,0 +1,16 @@
+apply plugin: 'application'
+mainClassName = 'org.ros.RosRun'
+
+repositories {
+    maven {
+        url "../../../../devel/share/maven/"
+    }
+}
+
+dependencies {
+    /* An external maven artifact dependency */
+    compile 'org.ros.rosjava_core:rosjava:[0.2,0.3)'
+    compile 'org.ros.rosjava_messages:injected_armor_msgs:2.0.0'
+    compile project(':amor')
+}
+

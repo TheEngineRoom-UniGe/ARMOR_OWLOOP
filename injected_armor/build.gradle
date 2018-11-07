@@ -1,4 +1,3 @@
-
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'
 }
@@ -15,23 +14,31 @@ allprojects {
       A github url provides a good standard unique name for your project
       Example below, but you may wish to switch to your own unique url.
     */
-    group 'it.emarolab.amor'
+//    group 'it.emarolab.amor'
+    group 'it.emarolab.injected_armor'
     version = project.catkin.pkg.version
 }
 
 subprojects {
 
       task deployApp() << {
-        File binDir = new File(project.projectDir, '/bin')
-        if (! binDir.isDirectory()) {
-          println "Creating $binDir directory"
-          binDir.mkdirs()
-        }
-        File link = new File(binDir,"execute")
-        File target = new File(project.projectDir, "build/install/$project.name/bin/$project.name")
-        println "Creating symlink from $link.absolutePath to $target.absolutePath"
-        ant.symlink(link: link.absolutePath, resource: target.absolutePath, overwrite: true)
-    }
+          if (project.hasProperty("installApp")){
+              //if( "$project.name" == mainModuleName) {
+              File binDir = new File(project.projectDir, '/bin')
+              if (! binDir.isDirectory()) {
+                println "Creating $binDir directory"
+                binDir.mkdirs()
+              }
+              File link = new File(binDir, "execute")
+              File target = new File(project.projectDir, "build/install/$project.name/bin/$project.name")
+              println "Creating symlink from $link.absolutePath to $target.absolutePath"
+              ant.symlink(link: link.absolutePath, resource: target.absolutePath, overwrite: true)
+          } else println( "Do NOT creating executable from \"$project.name\" since does not have installApp task")
+          // for having installAPP you need to add
+          // apply plugin: 'application'
+          // mainClassName = 'org.ros.RosRun'
+          // to the build.gradle in the submodule that is a ROS node or service (not in other)
+      }
     /* 
      * The ros plugin configures a few things:
      * 

@@ -1,0 +1,5 @@
+<launch>
+
+<node pkg="injected_armor" type="execute" name="armor" args="it.emarolab.armor.ARMORMainService"/>
+
+</launch>
