@@ -43,6 +43,7 @@ public class ARMORMainService extends AbstractNodeMain {
         ARMORResourceManager.setLogging(connectedNode);
 
         // test sit
+        it.emarolab.sit.Test.main( new String[]{"null","null"});
 
         // Callback for ArmorDirective.srv calls (single operation)
 

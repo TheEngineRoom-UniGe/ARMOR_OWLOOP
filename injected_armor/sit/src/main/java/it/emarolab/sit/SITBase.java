@@ -30,7 +30,7 @@ public interface SITBase {
      * The path to the main t-box ontological representation
      * used by the SIT algorithm, with respect to the {@code src} folder.
      */
-    String ONTO_FILE = "../resources/t_box/empty-scene.owl";
+    String ONTO_FILE = "src/injected_armor_pkgs/injected_armor/sit/resources/t_box/empty-scene.owl"; // TODO make this a parameter from launcher
 
     /**
      * The {@code IRI} domain of the main t-box ontological representation
