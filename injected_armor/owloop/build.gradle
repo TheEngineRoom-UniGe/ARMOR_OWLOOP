@@ -1,6 +1,5 @@
-
 group 'it.emarolab.owloop'
-version '2.0'
+version = project.catkin.pkg.version
 
 repositories {
     maven {

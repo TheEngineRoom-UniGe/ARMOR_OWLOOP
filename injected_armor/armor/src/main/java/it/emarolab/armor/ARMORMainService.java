@@ -42,6 +42,8 @@ public class ARMORMainService extends AbstractNodeMain {
 
         ARMORResourceManager.setLogging(connectedNode);
 
+        // test sit
+        
         // Callback for ArmorDirective.srv calls (single operation)
 
         ServiceServer<ArmorDirectiveRequest, ArmorDirectiveResponse> armorCallback =
