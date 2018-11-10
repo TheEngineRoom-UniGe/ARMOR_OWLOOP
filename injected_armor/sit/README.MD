@@ -33,8 +33,15 @@ Also, it can be the case that a very complex scene is recognised by a relative s
 that hold (i.e.: a sub scene). To discriminate when those differences are too height, and
 trigger a new learning procedure, the concept of *confidence* is introduce as a number within [0,1].
  
-### Contacts
 
-Work are progressing to give you more details about the algorithm.
-In the middle while, for any information, support, discussion or comments do not hesitate to contact me through this Github repository or at: 
-[luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it), 
+# 
+
+
+## Original Package
+
+This ROS package has been imported from [EmaroLab](https://github.com/EmaroLab/scene_identification_tagging).
+
+## Contacts
+
+For comment, discussions or support refer to this git repository and open issues before to contact us at:
+ - [luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it).
