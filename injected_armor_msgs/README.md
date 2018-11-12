@@ -1,6 +1,6 @@
 # armor_msgs
 
-It contains the definition of all the [Services](https://github.com/EmaroLab/armor_msgs/tree/master/srv) and [Messages](https://github.com/EmaroLab/armor_msgs/tree/master/msg) used by **a ROS Multi-Ontology Reference** ([arMOR](https://github.com/EmaroLab/armor)) architecture.
+It contains the definition of all the ARMOR [services](https://github.com/buoncubi/injected_armor_pkgs/tree/master/injected_armor_msgs/srv) and [Messages](https://github.com/buoncubi/injected_armor_pkgs/tree/master/injected_armor_msgs/msg) used by **a ROS Multi-Ontology Reference** ([arMOR](https://github.com/buoncubi/injected_armor_pkgs/tree/master/injected_armor/armor)) architecture.
 
 ## Original Package
 

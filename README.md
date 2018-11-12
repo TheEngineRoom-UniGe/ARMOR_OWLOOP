@@ -29,12 +29,12 @@ Run `catkin_make` and test the basic armor service with
 
 A sit test is starting (at line 46 in [this file](https://github.com/EmaroLab/injected_armor_pkgs/blob/master/injected_armor/armor/src/main/java/it/emarolab/armor/ARMORMainService.java)) by default as an *hello world* example, where you should set the correct path of the ontology (at line 33 in [this file](https://github.com/EmaroLab/injected_armor_pkgs/blob/master/injected_armor/sit/src/main/java/it/emarolab/sit/SITBase.java)).
 
-Those lines (toughener with the message definitions in `injected_armor_msgs`), whould be change in order to allow a ROS client to call the SIT algorithm through an `armor` request.
+Those lines (toughener with the message definitions in `injected_armor_msgs`), whould be changed in order to allow a ROS client to call the SIT algorithm through an `armor` request.
 
 
 ## Contacts
 
-For comment, discussions or support refer to this git repository open issues before to contact us (more detailed contacts to the author is further specified in each module)
+For comment, discussions or support refer to this git repository open issues before to contact us (more detailed contacts to the authors is further specified in each module)
  - [luca.buoncompagni@edu.unige.it](mailto:luca.buoncompagni@edu.unige.it).
 
 

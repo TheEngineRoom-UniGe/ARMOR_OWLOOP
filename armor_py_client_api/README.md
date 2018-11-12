@@ -1,5 +1,5 @@
 # ArmorPy
-A python client library for **ARMOR** originally hosted [here](https://github.com/EmaroLab/armor).
+A python client library for **ARMOR** originally hosted by [EMAROlab](https://github.com/EmaroLab/armor_py_api).
 
 Allows users to easily call ARMOR service from Python code.
 

@@ -145,7 +145,7 @@ definition and regenerate it from scratch, instead of updating.
 
 ## Original Package
 
-This ROS package has been imported from [EmaroLab](https://github.com/EmaroLab/armor).
+This ROS package has been imported from [EmaroLab](https://github.com/EmaroLab/owloop).
 
 ## Contacts
 
