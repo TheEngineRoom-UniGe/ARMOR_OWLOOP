@@ -18,3 +18,7 @@
 	path = scene_identification_tagging
 	url = https://github.com/EmaroLab/scene_identification_tagging.git
 	branch = master
+[submodule "owloop"]
+	path = owloop
+	url = https://github.com/EmaroLab/owloop.git
+	branch = master
