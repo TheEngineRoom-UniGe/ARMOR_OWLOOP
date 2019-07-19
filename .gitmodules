@@ -14,3 +14,7 @@
 	path = ros_multi_ontology_references
 	url = https://github.com/EmaroLab/ros_multi_ontology_references.git
 	branch = master
+[submodule "scene_identification_tagging"]
+	path = scene_identification_tagging
+	url = https://github.com/EmaroLab/scene_identification_tagging.git
+	branch = master
