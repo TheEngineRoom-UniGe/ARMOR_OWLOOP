@@ -1,6 +1,17 @@
 # injected_armor
 an extention of [ARMOR](https://arxiv.org/abs/1706.10151) with OWLOOP and the injected service SIT.
 
+# INSTALLATION
+- `cd ros_ws/src/`
+- `git clone https://github.com/EmaroLab/injected_armor_pkgs.git`
+- `cd injected_armor_pkgs/`
+- `git submodule update --init --recursive --remote`
+- `cd ../..`
+- `catkin_make`
+
+
+# README AND DOCUMENTATION OUT OF DATE
+
 # Overview 
 
 This repository contains a [ROSJAVA](http://wiki.ros.org/rosjava) packages for managing OWL ontologies in a robotic architecture.
