@@ -21,7 +21,7 @@
 [submodule "owloop"]
 	path = owloop
 	url = https://github.com/EmaroLab/owloop.git
-	branch = master
+	branch = ROSjava-based
 [submodule "sit_armor"]
 	path = sit_armor
 	url = https://github.com/EmaroLab/sit_armor.git
