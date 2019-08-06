@@ -6,6 +6,9 @@ an extention of [ARMOR](https://arxiv.org/abs/1706.10151) with OWLOOP and the in
 - `git clone https://github.com/EmaroLab/injected_armor_pkgs.git`
 - `cd injected_armor_pkgs/`
 - `git submodule update --init --recursive --remote`
+- optionally update to the last version 
+      - `git submodule foreach git pull origin master`
+      - `git submodule foreach git checkout master`
 - `cd ../..`
 - `catkin_make`
 
