@@ -13,7 +13,7 @@ an extention of [ARMOR](https://arxiv.org/abs/1706.10151) with OWLOOP and the in
 - `catkin_make`
 
 
-# README AND DOCUMENTATION OUT OF DATE
+# DOCUMENTATION BELOW MIGHT BE OUT OF DATE
 
 # Overview 
 
