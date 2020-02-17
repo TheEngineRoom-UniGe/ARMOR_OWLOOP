@@ -21,7 +21,7 @@ In particular the repository contains four sub-repositories:
 - [SIT](https://github.com/EmaroLab/scene_identification_tagging) is a symbolic-base algorithm for learning and structuring scenes as classes in an ontology based on OWLOOP. This package is considered as a library.
 - [SIT-service](https://github.com/EmaroLab/sit_armor) SIT uses OWLOOP to allow ARMOR provinding interface for learning and recognising scenes. Those interfaces are defined inside the SIT-service component.
 
-For more information  please check the `README` file and the documentations inside each sub-repository of the above lists (Note that the most updated documentation is always **in the master brunch**).
+For more information  please check the `README` file and the documentations inside each sub-repository of the above lists (Note that the most updated documentation is always **in the master branch**).
 
 ## Contacts
 
