@@ -2,7 +2,7 @@
 The classic ARMOR can be found [here](https://github.com/EmaroLab/armor).
 This repository is an extention of [ARMOR](https://arxiv.org/abs/1706.10151) based on OWLOOP to implement the [SIT](https://ieeexplore.ieee.org/abstract/document/8956457) algorithm, which is injected in the ARMOR service.
 
-# INSTALLATION
+# Installation
 - `cd ros_ws/src/`
 - `git clone https://github.com/EmaroLab/injected_armor_pkgs.git`
 - `cd injected_armor_pkgs/`
