@@ -1,6 +1,6 @@
 # armor_owloop
 The classic ARMOR (**A** **R**OS **M**ulti-**O**ntology **R**eference) can be found [here](https://github.com/EmaroLab/armor).
-This repository is an extention of [ARMOR](https://arxiv.org/abs/1706.10151) based on OWLOOP to implement the [SIT](https://ieeexplore.ieee.org/abstract/document/8956457) algorithm, which is injected in the ARMOR service.
+This repository instead is an extention of [ARMOR](https://arxiv.org/abs/1706.10151) based on OWLOOP to implement the [SIT](https://ieeexplore.ieee.org/abstract/document/8956457) algorithm, which is injected in the ARMOR service.
 
 # Installation
 - `cd ros_ws/src/`
